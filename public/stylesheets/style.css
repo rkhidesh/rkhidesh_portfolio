@@ -1,8 +1,28 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#logo {
+  height: 100px;
 }
 
-a {
-  color: #00B7FF;
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.navbar ul li a:after {
+  content: " ";
+  position: absolute;
+  background-color: #694e4e;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.4s;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
 }
