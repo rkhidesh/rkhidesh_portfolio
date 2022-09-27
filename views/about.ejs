@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
@@ -25,12 +25,21 @@
   <body>
     <% include partials/navbar.ejs %>
     <div class="box">
-      <h1 id="title">Hello, my name is Rebecca.</h1>
-      <h3 class="sec1_description">Welcome to my website.</h3>
-      <h3 class="sec1_description">
-        Thank you for stopping by and feel free to look around.
+      <h3 id="sec2_description">
+        <img src="/images/mypic.jpg" alt="" id="myPic" />
+        I'm a student and I'm currently studying Software Engineering. It's been
+        a year and a half since I started my programming journey and so far it
+        has been challenging but rewarding. This is just the first of many
+        projects I plan to make in the future.
       </h3>
-      <img src="images/g.gif" id="gif" />
+
+      <a
+        id="resume_link"
+        href="/assets/Rebecca_Khidesheli_Resume.pdf"
+        target="_blank"
+        >View or Download Resume</a
+      >
+
       <% include partials/footer.ejs %>
     </div>
   </body>
