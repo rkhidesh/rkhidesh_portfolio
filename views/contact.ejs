@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <% include partials/navbar.ejs %>
+    <div class="box">
+      <h1>Contact Me</h1>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Your name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Your E-mail"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="4"
+          placeholder="Your Message"
+        ></textarea>
+      </div>
+      <div class="center">
+        <button id="submit" onclick="sendMail(); return false">
+          Send Message
+        </button>
+      </div>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

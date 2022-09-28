@@ -18,12 +18,12 @@ router.get("/projects", function (req, res, next) {
 
 /* GET services page. */
 router.get("/services", function (req, res, next) {
-  res.render("index", { title: "Services" });
+  res.render("services", { title: "Services" });
 });
 
 /* GET home page. */
 router.get("/contact", function (req, res, next) {
-  res.render("index", { title: "Contact Me" });
+  res.render("contact", { title: "Contact Me" });
 });
 
 module.exports = router;
