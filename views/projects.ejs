@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <% include partials/navbar.ejs %>
+    <div class="projectsBox">
+      <img
+        style="
+          height: 250px;
+          border-radius: 30%;
+          position: relative;
+          left: 5rem;
+        "
+        src="/images/calc.jpg"
+      />
+      <a
+        href="https://rkhidesh.github.io/Calculator/"
+        target="_blank"
+        style="padding-left: 0.7rem"
+      >
+        Calculator
+      </a>
+      <img
+        style="
+          height: 250px;
+          border-radius: 30%;
+          position: relative;
+          left: 5rem;
+        "
+        src="/images/trivia.jpg"
+      />
+      <a
+        href="https://rkhidesh.github.io/Trivia-Game/"
+        target="_blank"
+        style="position: relative; left: -7rem"
+        >Trivia Game</a
+      >
+      <img
+        style="
+          height: 250px;
+          border-radius: 30%;
+          position: relative;
+          left: 3rem;
+        "
+        src="/images/Pomodoro.jpg"
+      />
+      <a
+        href="https://rkhidesh.github.io/Pomodoro-Timer/"
+        target="_blank"
+        style="position: relative; left: -9.5rem"
+      >
+        Pomodoro Timer
+      </a>
+
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

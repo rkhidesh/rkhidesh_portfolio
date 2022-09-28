@@ -135,3 +135,27 @@ ion-icon {
 #resume_link:hover {
   border-bottom: 5px solid #fadede;
 }
+
+.projectsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 83vh;
+  color: #fadede;
+  background: #694e4e no-repeat center center/cover;
+  font-family: "Source Code Pro", monospace;
+}
+
+.projectsBox a {
+  text-decoration: none;
+  color: #fadede;
+  position: relative;
+  top: 10rem;
+  left: -7rem;
+}
+
+.projectsBox a:hover {
+  border-bottom: 5px solid #fadede;
+  color: #fadede;
+}
