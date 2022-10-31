@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <% include ../partials/navbar.ejs %>
+    <div class="box">
+      <% if (messages.length > 0){ %>
+
+      <div class="alert alert-danger"><%= messages%></div>
+
+      <% } %>
+      <h1>Register</h1>
+      <form method="post" autocomplete="off">
+        <div class="form-group" style="padding-bottom: 0">
+          <label for="username">Username: </label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            id="username"
+            placeholder="Enter username"
+            required
+            autofocus
+          />
+        </div>
+        <div class="form-group" style="padding-bottom: 0">
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter password"
+            required
+            autofocus
+          />
+        </div>
+        <div class="form-group" style="padding-bottom: 0">
+          <label for="email">E-mail: </label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter e-mail"
+            required
+            autofocus
+          />
+        </div>
+        <div class="form-group" style="padding-bottom: 0">
+          <label for="displayName">Display Name: </label>
+          <input
+            type="displayName"
+            name="displayName"
+            class="form-control"
+            id="displayName"
+            placeholder="Enter display name"
+            required
+            autofocus
+          />
+        </div>
+        <div class="d-flex justify-content-center" style="padding-top: 5rem">
+          <button id="login" type="submit">Register</button>
+
+          <button onclick="location.href='/'" id="cancel" type="submit">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <% include ../partials/footer.ejs %>
+  </body>
+</html>

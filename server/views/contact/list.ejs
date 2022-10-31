@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body style="background-color: #694e4e">
+    <% include ../partials/navbar.ejs %>
+    <div class="center">
+      <div class="row">
+        <div class="col-md-11 offset-md-1">
+          <% if(typeof displayName == 'string' && displayName) {%>
+              <a href="/contact-list/add" class="btn btn-primary" role="button"><i class="fa-solid fa-circle-plus"></i> Add a Contact
+          </a>
+          <% } %> 
+                    
+          <br>
+          <table class="table align-middle table-bordered table-striped table-hover" style="background-color: white;">
+              <tr>
+                  <th class="text-center">Contact Name</th>
+                  <th class="text-center">Contact Number</th>
+                  <th class="text-center">Contact Email</th>
+
+                  <% if(typeof displayName == 'string' && displayName) {%>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                  <% } %>                   
+              </tr>
+
+              <% for(let count = 0; count < ContactList.length; count++){ %>
+                  <tr>
+                      <td class="text-center"><%= ContactList[count].name%></td>
+                      <td class="text-center"><%= ContactList[count].number%></td>
+                      <td class="text-center"><%= ContactList[count].email%></td>
+                      <% if(typeof displayName == 'string' && displayName) {%>
+
+                      <td class="text-center">
+                        <a href="/contact-list/edit/<%=ContactList[count].id%>" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                      </th>
+                      <td class="text-center">                        
+                        <a href="/contact-list/delete/<%=ContactList[count].id%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i>Delete</a>
+                      </th>
+                      <% } %>                   
+                  </tr>
+              <%} %>
+            </table>
+          </div>
+        </div>
+    </div>
+  <% include ../partials/footer.ejs %>
+  </body>
+</html>
