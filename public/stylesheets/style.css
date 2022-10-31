@@ -404,3 +404,47 @@ textarea:focus {
   width: 60%;
   padding: 70px 0;
 }
+
+#login {
+  max-width: 200px;
+  margin-right: 20px;
+  cursor: pointer;
+  background: linear-gradient(to right, #f3c5c5, #c1a3a3);
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  font-family: "Open Sans", sans-serif;
+}
+
+#login:active {
+  transform: translateY(4px);
+}
+
+#cancel {
+  cursor: pointer;
+  background: linear-gradient(to right, #f3c5c5, #c1a3a3);
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  font-family: "Open Sans", sans-serif;
+}
+
+#cancel:active {
+  transform: translateY(4px);
+}
+
+#register {
+  text-decoration: none;
+  color: #fadede;
+}
+#register:hover {
+  border-bottom: 5px solid #fadede;
+}

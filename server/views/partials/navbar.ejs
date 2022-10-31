@@ -36,9 +36,25 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact Me</a>
         </li>
-                <li class="nav-item">
-          <a class="nav-link" href="/book-list">Books</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact-list">Contacts List</a>
         </li>
+
+        <% if(typeof displayName == 'string' && displayName){ %>
+        <li
+          class="nav-item"
+          style="position: absolute; left: 80%; font-size: 1.2rem"
+        >
+          Welcome, <%= displayName %>
+        </li>
+        <li class="nav-item" style="position: absolute; left: 90%">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        <% } else{ %>
+        <li class="nav-item" style="position: absolute; left: 90%">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <% } %>
       </ul>
     </div>
   </div>
